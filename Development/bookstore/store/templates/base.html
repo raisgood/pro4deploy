@@ -1,0 +1,56 @@
+{% load static %}
+{% load bootstrap_themes %}
+{% bootstrap_styles theme='cyborg' type='min.css' %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Heru Productions</title>
+    <link rel="stylesheet" href="{% static 'base/css/custom.css' %}" >
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="{% static 'base/css/custom.css' %}" />
+  </head>
+
+  <body>
+    {% block title %}
+    <div>
+    </div>
+  <div>
+  <nav>
+  <ul class="nav nav-tabs">
+  <li class="nav-item">
+    <a href="{% url 'home' %}">Home</a>
+  </li>
+  <li class="nav-item">
+    <a href="{% url 'library' %}">Library</a>
+  </li>
+  <li class="nav-item">
+    <a href="{% url 'contact' %}">Contact</a>
+  </li>
+</ul>
+<div id="myTabContent" class="tab-content">
+  <div class="tab-pane fade show active" id="home"></div>
+  <div class="tab-pane fade" id="profile"></div>
+  <div class="tab-pane fade" id="dropdown1"></div>
+  <div class="tab-pane fade" id="dropdown2"></div>
+</div>
+  </nav>
+  </div>
+  <section class="image">
+   <div class="square">
+  <img class="header-image" src="{% static 'base/img/herulogo.jpg' %}" width="250" height="200">
+  <div class="btn">
+  <button type="button" class="btn-primary"><a href="https://www.youtube.com/channel/UChOR-6eStcqtybuVzOBsgzQ" target="blank">YouTube</a></button>
+  <button type="button" class="btn-primary"><a href="https://twitter.com/heruproductions" target="blank">Twitter</a></button>
+  <button type="button" class="btn-primary"><a href="https://www.facebook.com/heruproductions/" target="blank">Facebook</a></button>
+  </div>
+
+    {% block content %}
+    {% endblock %}
+    <div class="title">
+      <span class="badge-primary">Property of Heru Productions, LLC. @</span>
+    </div>
+    {% endblock %}
+    </div>
+    </section>
+  </body>
+</html>
