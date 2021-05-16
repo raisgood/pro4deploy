@@ -1,1 +1,1 @@
-web: gunicorn pro4deploy2.wsgi
+web: gunicorn pro4deploy-app-rh.wsgi
